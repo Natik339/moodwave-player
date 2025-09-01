@@ -1,0 +1,130 @@
+
+
+.border{
+    border: 2px solid red;
+    margin: 3px;
+}
+
+.justify-content{
+    justify-content: center;
+}
+
+.items-center{
+    align-items: center;
+}
+
+.flex{
+    display: flex;
+}
+
+.bg-black{
+    background-color: black;
+    color: white;
+}
+
+.invert{
+    filter:invert(1);
+}
+
+.bg-grey{
+    background-color: #121212;
+}
+
+.rounded{
+    border-radius: 7px;
+}
+
+.m-1{
+    margin: 5px;
+}
+
+.p-1{
+    padding: 10px;
+}
+
+
+/* Dark site scrollbar CSS — drop into your stylesheet */
+
+/* Customize these variables to match your design */
+:root {
+  --scrollbar-track: #0b0b0c;      /* background behind the thumb */
+  --scrollbar-thumb: #2f855a;      /* main thumb color (green) */
+  --scrollbar-thumb-hover: #28734a;/* darker on hover */
+  --scrollbar-thumb-active: #1f5b3b;
+  --scrollbar-thumb-border: rgba(255,255,255,0.03); /* subtle inner border */
+  --scrollbar-size: 12px;          /* thickness */
+  --scrollbar-radius: 999px;       /* rounded pill */
+}
+
+/* Apply to the whole page */
+html, body {
+  scrollbar-width: thin; /* Firefox: thin vs auto */
+  scrollbar-color: var(--scrollbar-thumb) var(--scrollbar-track); /* Firefox */
+}
+
+/* Optionally target only specific scrollable containers:
+   .scrollable { overflow: auto; } */
+.scrollable,
+html, body {
+  /* ensure on some platforms the page actually shows a styled scrollbar */
+  -webkit-overflow-scrolling: touch;
+}
+
+/* WebKit browsers (Chrome, Edge, Safari) */
+.scrollable::-webkit-scrollbar,
+html::-webkit-scrollbar,
+body::-webkit-scrollbar {
+  width: var(--scrollbar-size);
+  height: var(--scrollbar-size);
+}
+
+.scrollable::-webkit-scrollbar-track,
+html::-webkit-scrollbar-track,
+body::-webkit-scrollbar-track {
+  background: var(--scrollbar-track);
+  border-radius: var(--scrollbar-radius);
+}
+
+/* The draggable thumb */
+.scrollable::-webkit-scrollbar-thumb,
+html::-webkit-scrollbar-thumb,
+body::-webkit-scrollbar-thumb {
+  background: var(--scrollbar-thumb);
+  border-radius: var(--scrollbar-radius);
+  border: 3px solid var(--scrollbar-thumb-border); /* gives a tiny inset look */
+  min-height: 28px; /* prevents extremely short thumbs */
+}
+
+/* Hover & active states for better affordance */
+.scrollable::-webkit-scrollbar-thumb:hover,
+html::-webkit-scrollbar-thumb:hover,
+body::-webkit-scrollbar-thumb:hover {
+  background: var(--scrollbar-thumb-hover);
+}
+
+.scrollable::-webkit-scrollbar-thumb:active,
+html::-webkit-scrollbar-thumb:active,
+body::-webkit-scrollbar-thumb:active {
+  background: var(--scrollbar-thumb-active);
+}
+
+/* Corner (where vertical + horizontal meet) */
+.scrollable::-webkit-scrollbar-corner,
+html::-webkit-scrollbar-corner,
+body::-webkit-scrollbar-corner {
+  background: var(--scrollbar-track);
+}
+
+/* Accessibility: reduce motion if user prefers it */
+@media (prefers-reduced-motion: reduce) {
+  .scrollable,
+  html, body {
+    -webkit-overflow-scrolling: auto;
+  }
+}
+
+/* Optional: a compact variant */
+.scrollbar-compact {
+  --scrollbar-size: 8px;
+  --scrollbar-radius: 6px;
+}
